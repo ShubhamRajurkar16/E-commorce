@@ -6,7 +6,8 @@ import { SellerComponent } from './seller.component';
 
 @NgModule({
   declarations: [
-    SellerComponent
+    SellerComponent,
+  
   ],
   imports: [
     CommonModule

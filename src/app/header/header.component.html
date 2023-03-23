@@ -1,30 +1,43 @@
-<nav class="navbar navbar-expand-lg  bg-primary text-dark">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
-            aria-controls="navbarTogglerDemo02" aria-expanded="false" >
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+    <div class="container">
+        <a class="navbar-brand">
+            <h5 class="nav-name">E-Com</h5>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-       
-            <form  class="navbar-nav me-auto mb-lg-0 px-5">
-                <input class="form-control mx-2" type="search" placeholder="Search"/>
-                <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-            <ul class="navbar-nav mb-2 mb-lg-0 text-dark">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Seller</a>
-                </li>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+
+            <ul class="navbar-nav m-auto">
+
                 <li class="nav-item">
                     <a class="nav-link" href="#">Home</a>
                 </li>
+
+
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Cart</a>
+                    <a class="nav-link" [routerLink]="'/seller'">Seller</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Log-Out</a>
+                <li class="nav-item ">
+                    <a class="nav-link" [routerLink]="'/login'">Login</a>
+                </li>
+
+                <li class="nav-item ">
+                    <a class="nav-link" [routerLink]="'/Cart'">Cart</a>
                 </li>
             </ul>
+
+
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search">
+                <button class="btn btn-success">Search</button>
+            </form>
         </div>
     </div>
 </nav>
