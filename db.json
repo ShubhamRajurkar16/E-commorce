@@ -1,0 +1,19 @@
+{
+  "seller-sign": [
+    {
+      "id": 1,
+      "name": "shubham",
+      "email": "shubham@gmail.com",
+      "password": "4545"
+    }
+  
+  ],
+  "seller-login": [
+    {
+      "id": 1,
+      "email": "shubham@gmail.com",
+      "password": "4545"
+    }
+  
+  ]
+}

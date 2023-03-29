@@ -1,26 +1,19 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CartComponent } from './cart/cart.component';
+import { SellerGuard } from './auth/seller.guard';
 import { HomeComponent } from './home/home.component';
-import { LoginComponent } from './login/login.component';
-import { SellerComponent } from './seller/seller.component';
-import { SignUpComponent } from './sign-up/sign-up.component';
+import { SellerHomeComponent } from './seller-home/seller-home.component';
+import { SellerLoginComponent } from './seller-login/seller-login.component';
 
 const routes: Routes = [
   {
     path:'',component:HomeComponent,
   },
   {
-    path:'login',component:LoginComponent,
+    path:'seller-login',component:SellerLoginComponent,
   },
   {
-    path:'seller',component:SellerComponent
-  },
-  {
-    path:'Cart',component:CartComponent,
-  },
-  {
-    path:'signup',component:SignUpComponent,
+    path:'seller-home',component:SellerHomeComponent,canActivate:[SellerGuard]
   }
 ];
 
