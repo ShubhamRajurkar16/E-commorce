@@ -9,13 +9,17 @@ export class ProductService {
 
   constructor(private http:HttpClient) { }
 
-  saveProduct(body:product){
-    return this.http.post(``,body)
+  // saveProduct(body:product){
+  //   return this.http.post(`http://localhost:3000/product`,body)
+  // }
+  getProduct(){
+    return this.http.get<product>(`http://localhost:3000/product`)
   }
-  getAllProduct(){
-    return this.http.get(``)
-  }
-  updateAllProduct(id:number,body:any){
-    return this.http.put(``,body)
+  // updateAllProduct(id:number,body:any){
+  //   return this.http.put(`http://localhost:3000/product`,body)
+  // }
+
+  deleteProduct(id: number) {
+    return this.http.delete(`http://localhost:3000/product/${id}`);
   }
 }

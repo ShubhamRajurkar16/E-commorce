@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class SellerGuard implements CanActivate {
+export class AuthGuard implements CanActivate {
   canActivate() {
     return true;
   }
