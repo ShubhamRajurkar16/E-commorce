@@ -1,0 +1,80 @@
+<div class="content container-fluid">
+
+    <div class="row justify-content-center my-5">
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-body">
+                    <form [formGroup]="AddProduct">
+                        <div class="row">
+
+                            <div class="col-12">
+                                <h5 class="text-center">Add New Product</h5>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <div class="form-group">
+                                    <label class="form-label"></label>
+                                    <input type="text" class="form-control" name="name" formControlName="name" placeholder="Enter Product name" />
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-sm-6">
+                                <div class="form-group">
+                                    <label class="form-label"></label>
+                                    <input type="text" class="form-control" name="price" formControlName="price" placeholder="Enter Product Price" />
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-sm-6">
+                                <div class="form-group">
+                                    <label class="form-label"></label>
+                                    <input type="text" class="form-control" name="category" formControlName="category" placeholder="Enter product category" />
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-sm-6">
+                                <div class="form-group">
+                                    <label class="form-label"></label>
+                                    <input type="text" class="form-control" name="description" formControlName="description" placeholder="Enter product Description" />
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-sm-6">
+                                <div class="form-group">
+                                    <label class="form-label"></label>
+                                    <input type="text" class="form-control" name="color" formControlName="color" placeholder="Enter product color" />
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-sm-6">
+                                <div class="form-group">
+                                    <label class="form-label"></label>
+                                    <input type="number" class="form-control" name="quantity" formControlName="quantity"
+                                        placeholder="Enter product quantity Available" />
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-sm-6">
+                                <div class="form-group">
+                                    <label class="form-label"></label>
+                                    <input type="text" class="form-control" name="productId" formControlName="productId" placeholder="Enter product productId" />
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-sm-6">
+                                <div class="form-group">
+                                    <label class="form-label"></label>
+                                    <input type="text" class="form-control" name="image" formControlName="image" placeholder="enter product image"/>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-success mx-3" (click)="submitProduct(AddProduct.value)">Submit</button>
+                                <button type="submit" class="btn btn-danger my-3">Reset</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

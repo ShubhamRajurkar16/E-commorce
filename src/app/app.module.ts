@@ -9,6 +9,7 @@ import { SellerHomeComponent } from './seller-home/seller-home.component';
 import { HttpClientModule} from '@angular/common/http'
 import { ReactiveFormsModule } from '@angular/forms';
 import { SellerLoginComponent } from './seller-login/seller-login.component';
+import { AddProductComponent } from './add-product/add-product.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { SellerLoginComponent } from './seller-login/seller-login.component';
     HeaderComponent,
     HomeComponent,
     SellerHomeComponent,
-    SellerLoginComponent
+    SellerLoginComponent,
+    AddProductComponent
   
   ],
   imports: [
