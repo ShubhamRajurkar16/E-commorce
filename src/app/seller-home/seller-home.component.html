@@ -2,8 +2,6 @@
 
     <h1 class="d-flex">Product List</h1>
   <button [routerLink]="'/seller-Add'" class=" btn btn-success">Add Products</button>
-
-    <p class="message-p">{{ productMessage }}</p>
     <table class="table text-center">
       <thead>
         <tr>
@@ -25,9 +23,10 @@
           <td>{{ item.category }}</td>
           <td>{{ item.description }}</td>
           <td>
-            <!-- <fa-icon (click)="deleteProduct(item.id)" [icon]="icon"></fa-icon> -->
-            <!-- <a class="adjust-update-link" routerLink="/seller-update-product/{{item.id}}"> <fa-icon  [icon]="iconEdit"></fa-icon></a> -->
-            
+            <!-- <fa-icon (click)="deleteProduct(item.id)" [icon]="pen"></fa-icon> -->
+            <!-- <a class="adjust-update-link" routerLink="/seller-update-product/{{item.id}}"> <fa-icon  [icon]="trash"></fa-icon></a> -->
+            <button class="btn btn-success m-2" (click)="editdata(item.id)"><fa-icon class="pen" [icon]="pen"></fa-icon></button>
+            <button class="btn btn-danger m-2" (click)="deleteProduct(item.id)"><fa-icon class="trash" [icon]="trash"> </fa-icon></button>
           </td>
         </tr>
       </tbody>

@@ -16,11 +16,12 @@ export class ProductService {
   getProduct(){
     return this.http.get<product>(`http://localhost:3000/product`)
   }
-  updateAllProduct(id:number,body:any){
-    return this.http.put(`http://localhost:3000/product`,body)
-  }
 
   deleteProduct(id: number) {
     return this.http.delete(`http://localhost:3000/product/${id}`);
+  }
+
+  updateAllProduct(id:number,body:any){
+    return this.http.put(`http://localhost:3000/product/${id}`,body)
   }
 }

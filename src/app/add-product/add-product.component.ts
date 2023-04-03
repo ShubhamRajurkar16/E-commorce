@@ -12,7 +12,6 @@ import { ProductService } from '../service/product.service';
 export class AddProductComponent {
 
   constructor(private product:ProductService,private route:Router){}
-  addProductMessage: string | undefined;
 
 
   AddProduct:FormGroup = new FormGroup({
@@ -27,27 +26,16 @@ export class AddProductComponent {
   })
 
 
-  // Product(){
-  //   // this.product.saveProduct(this.AddProduct.value).subscribe((res)=> console.log(res))
-  // }
-
-
 
   submitProduct(data:product) {
     this.product.addProduct(data).subscribe((res) => {
-      console.log(res);
       if (res) {
         
         alert(
-          this.addProductMessage = 'Product is added successfully'
+          'Product is added successfully'
         )
        this.route.navigate(['seller-home'])
-      }
-      
+      }      
     });
-
-    setTimeout(() => {
-      this.addProductMessage=undefined
-    }, 3000);
   }
 }
